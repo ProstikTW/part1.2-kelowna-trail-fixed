@@ -7,8 +7,8 @@ Instructor: Washington Valencia
 ENTER STUDENT INFORMATION HERE 
 ==========================================
 CCTB project DevOps course
-STUDENT NAME: 
-STUDENT ID:
+STUDENT NAME: Denys Savinykh
+STUDENT ID: CT1006239
 SQAC114
 ==========================================
 
@@ -150,9 +150,20 @@ function AddGroupMember(lastName, firstName) {
 * Function to remove (delete) a selected group member from the selection list.
 * 
 */
-function RemoveGroupMember() {
+function RemoveGroupMember(lastName,firstName) {
 
-	throw "ERROR! You must work in this function before to send to Staging Environment!";
+	
+
+	let option = document.getElementById("members");
+	option.text = lastName + ", " + firstName;
+	membersLst.remove(option.selectedIndex);
+
+	lastname.value = "";
+	firstname.value = "";
+
+	lastname.focus();
+
+	
 
 }
 
