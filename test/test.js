@@ -8,11 +8,11 @@ var chrome = require("selenium-webdriver/chrome")
 
 async function kelownaTest() {
 
-    let driver = await new Builder().forBrowser("chrome").build();
-
     var options = new chrome.Options();
 
     options.addArguments("--no-sandbox");
+
+    let driver = await new Builder().forBrowser("chrome").build();
 
     await driver.get("https://devops-proj-staging-940f3.web.app");
 
