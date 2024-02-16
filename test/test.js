@@ -2,10 +2,17 @@ const { Console } = require("console");
 const {By, Key, Builder } = require("selenium-webdriver");
 require("selenium-webdriver/chrome");
 
+var chrome = require("selenium-webdriver/chrome")
+
+
 
 async function kelownaTest() {
 
     let driver = await new Builder().forBrowser("chrome").build();
+
+    var options = new chrome.Options();
+
+    options.addArguments("--no-sandbox");
 
     await driver.get("https://devops-proj-staging-940f3.web.app");
 

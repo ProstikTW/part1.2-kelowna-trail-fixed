@@ -30,7 +30,9 @@ pipeline {
             steps {
                 echo 'Production stage'
                 sh 'firebase deploy -P production-replica-1e82b --token "$FIREBASE_DEPLOY_TOKEN"'
-                
+                echo 'We are goint to test our website'
+               
+                sh 'node test/test.js'
             }
         }
     }
