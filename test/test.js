@@ -26,8 +26,8 @@ async function kelownaTest() {
     (By.xpath("/html/body/div[1]/table/tbody/tr/td[1]/form/table/tbody/tr/td[2]/p[1]/input[1]")).click();
 
     const members = await driver.findElement(By.id("members"));
+    console.log("Test Success"); 
 
-    console.log("Test Success");
     driver.close();
     driver.quit();
 }
